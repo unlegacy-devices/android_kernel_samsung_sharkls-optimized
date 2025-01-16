@@ -17,7 +17,7 @@ jobs:
         sudo git clone --depth 1 --branch android-7.1.2_r37 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8/
     - name: Building Kernel
       run: |
-        export CROSS_COMPILER=/opt/toolchains/arm-eabi-4.8/bin/arm-eabi-
+        export CROSS_COMPILE=/opt/toolchains/arm-eabi-4.8/bin/arm-eabi-
         export KBUILD_BUILD_USER=notnoelchannel
         export KBUILD_BUILD_HOST=unlegacy-devices
         make -j4 j3xnlte_defconfig
